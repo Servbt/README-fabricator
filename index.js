@@ -14,14 +14,13 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const filename = `${data.name.toLowerCase().split(" ").join("")}.json`
     fs.writeFile(fileName, JSON.stringify(data,null,"\t"), (err) =>
   err ? console.error(err) : console.log('Success!'))
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    
+
 const [title, description, installation, usage, contribution, debug] = questions;
 
     inquirer 
@@ -59,7 +58,8 @@ const [title, description, installation, usage, contribution, debug] = questions
             
         ])
         .then((response) =>
-        response ? console.log("it works"):console.log("no cigar")
+
+        response ? writeToFile("./log.txt", response):console.log("no cigar")
         )
 }
 

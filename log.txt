@@ -1,0 +1,8 @@
+{
+	"title": "hi",
+	"description": "hi",
+	"installation": "hi",
+	"usage": "hi",
+	"contribution": "hi",
+	"debug": "hi"
+}
