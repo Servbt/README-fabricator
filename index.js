@@ -21,16 +21,42 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    for(const question of questions){
-        console.log(typeof question);
-    }
+    
+const [title, description, installation, usage, contribution, debug] = questions;
+
     inquirer 
         .prompt([
             {
               type: "input",
-              message: "hello?",
-              name: "quesitions"
-            }
+              message: title,
+              name: "title"
+            },
+                {
+                type: "input",
+                message: description,
+                name: "description"
+            },
+                {
+                type: "input",
+                message: installation,
+                name: "installation"
+            },
+                {
+                type: "input",
+                message: usage,
+                name: "usage"
+            },
+                {
+                type: "input",
+                message: contribution,
+                name: "contribution"
+            },
+                {
+                type: "input",
+                message: debug,
+                name: "debug"
+            },
+            
         ])
         .then((response) =>
         response ? console.log("it works"):console.log("no cigar")
