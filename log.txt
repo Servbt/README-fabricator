@@ -1,8 +1,8 @@
 {
-	"title": "hi",
-	"description": "hi",
-	"installation": "hi",
-	"usage": "hi",
-	"contribution": "hi",
-	"debug": "hi"
+	"title": "test",
+	"description": "test",
+	"installation": "test",
+	"usage": "test",
+	"contribution": "test",
+	"debug": "test"
 }
