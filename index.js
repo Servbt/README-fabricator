@@ -11,14 +11,15 @@ const questions = [
     "Exactly how will the program be used?",
     "what license will this be under?",
     "Contribution Guidelines?",
-    "How to report Bugs?"
+    "How to report Bugs?",
+    "What is your Email?"
 ];
 
 
 
 function init() {
 
-const [title, description, installation, usage, license, contribution, debug] = questions;
+const [title, description, installation, usage, license, contribution, debug, contact] = questions;
 
     inquirer 
         .prompt([
@@ -57,6 +58,11 @@ const [title, description, installation, usage, license, contribution, debug] = 
                 message: debug,
                 name: "debug"
             },
+            {
+                type: "input",
+                message: contact,
+                name: "contact"
+            }
             
         ])
         .then((response) =>{
@@ -64,7 +70,7 @@ const [title, description, installation, usage, license, contribution, debug] = 
         const readmeFile =  generateMarkdown(response);
 
         
-            fs.writeFile("README.md", readmeFile, (err) => err ? console.log(err) : console.log("no cigar"))
+            fs.writeFile("generated README.md", readmeFile, (err) => err ? console.log(err) : console.log("no cigar"))
          } )
 }
 
