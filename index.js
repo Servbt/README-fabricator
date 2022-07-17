@@ -9,6 +9,7 @@ const questions = [
     "Write a description for what your README will say:",
     "How will this application be installed?",
     "Exactly how will the program be used?",
+    "what license will this be under?",
     "Contribution Guidelines?",
     "How to report Bugs?"
 ];
@@ -17,7 +18,7 @@ const questions = [
 
 function init() {
 
-const [title, description, installation, usage, contribution, debug] = questions;
+const [title, description, installation, usage, license, contribution, debug] = questions;
 
     inquirer 
         .prompt([
@@ -40,6 +41,11 @@ const [title, description, installation, usage, contribution, debug] = questions
                 type: "input",
                 message: usage,
                 name: "usage"
+            },           
+                {
+                type: "input",
+                message: license,
+                name: "license"
             },
                 {
                 type: "input",
