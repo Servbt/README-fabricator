@@ -25,6 +25,9 @@ ${renderLicenseBadge(license)}`
   }
 }
 
+function usingThereadme(usage) {
+  return `${usage}`;
+}
 
 function generateMarkdown({ title, description, installation, usage, license, contribution, debug, contact }) {
   return `# ${title} 
@@ -48,8 +51,8 @@ ${description}
 ${installation}
   
   ## Usage
-  
-${usage}
+  ${usingThereadme(usage)}
+
   
 
 ## How to Test
